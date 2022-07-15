@@ -127,10 +127,10 @@
 			children = (
 				8FB0198A2874B0E300126939 /* AppDelegate.swift */,
 				8FB0198C2874B0E300126939 /* SceneDelegate.swift */,
-				8F6547BB287C99AA003C6F0C /* Controllers */,
 				8F20F50E287DEDF8001B43B3 /* Model */,
-				8F6547BE287C9E25003C6F0C /* SupportingFiles */,
 				8F6547BD287C99EE003C6F0C /* View */,
+				8F6547BB287C99AA003C6F0C /* Controllers */,
+				8F6547BE287C9E25003C6F0C /* SupportingFiles */,
 			);
 			path = moviepedia;
 			sourceTree = "<group>";
