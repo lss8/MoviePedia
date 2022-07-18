@@ -54,8 +54,15 @@ extension FeaturedViewController: UICollectionViewDataSource {
         if let cell = nowPlayingCollectionView.dequeueReusableCell(withReuseIdentifier: NowPlayingCollectionViewCell.cellIdentifier, for: indexPath) as? NowPlayingCollectionViewCell {
             
             cell.setup(title: nowPlayingMovies[indexPath.item].title,
-                       image: UIImage(named: nowPlayingMovies[indexPath.item].posterPath) ?? UIImage(),
+                       image: UIImage(),
                        date: nowPlayingMovies[indexPath.item].releaseDate)
+            let movie = nowPlayingMovies[indexPath.item]
+            Task {
+                let imageData = await Movie.donwloadImageData(withPath: movie.posterPath)
+                let imagem = UIImage(data: imageData) ?? UIImage()
+                cell.setup(title: movie.title, image: imagem, date: movie.releaseDate)
+            }
+            
             
             return cell
         }
@@ -66,8 +73,14 @@ extension FeaturedViewController: UICollectionViewDataSource {
         if let cell = upcomingCollectionView.dequeueReusableCell(withReuseIdentifier: UpcomingCollectionViewCell.cellIdentifier, for: indexPath) as? UpcomingCollectionViewCell {
             
             cell.setup(title: upcomingMovies[indexPath.item].title,
-                       image: UIImage(named: upcomingMovies[indexPath.item].posterPath) ?? UIImage(),
+                       image: UIImage(),
                        date: upcomingMovies[indexPath.item].releaseDate)
+            let movie = upcomingMovies[indexPath.item]
+            Task {
+                let imageData = await Movie.donwloadImageData(withPath: movie.posterPath)
+                let imagem = UIImage(data: imageData) ?? UIImage()
+                cell.setup(title: movie.title, image: imagem, date: movie.releaseDate)
+            }
 
             return cell
         }

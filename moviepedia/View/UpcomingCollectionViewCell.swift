@@ -26,7 +26,8 @@ class UpcomingCollectionViewCell: UICollectionViewCell {
                           "09-": "Sep ",
                           "10-": "Oct ",
                           "11-": "Nov ",
-                          "12-": "Dec ",]
+                          "12-": "Dec "]
+
     
     func setup(title: String, image: UIImage, date: String) {
         titleLabel.text = title

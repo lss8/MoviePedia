@@ -9,9 +9,9 @@ import Foundation
 
 extension Movie {
     
-    // MARK: - Download de Imagens
     static let urlComponents = URLComponents(string: "https://api.themoviedb.org/")!
     
+    // MARK: - Download de Popular
     static func popularMoviesAPI() async -> [Movie] {
         
         var components = Movie.urlComponents
@@ -37,6 +37,61 @@ extension Movie {
         
         return []
     }
+    
+    // MARK: - Download de NowPlaying
+    static func nowPlayingMoviesAPI() async -> [Movie] {
+        
+        var components = Movie.urlComponents
+        components.path = "/3/movie/now_playing"
+        components.queryItems = [
+            URLQueryItem(name: "api_key", value: Movie.apiKey)
+        ]
+        
+        let session = URLSession.shared
+        
+        do {
+            let (data, response) = try await session.data(from: components.url!)
+            
+            let decoder = JSONDecoder()
+            decoder.keyDecodingStrategy = .convertFromSnakeCase
+            let movieResult = try decoder.decode(MoviesResponse.self, from: data)
+            
+            return movieResult.results
+            
+        } catch {
+            print(error)
+        }
+        
+        return []
+    }
+    
+    // MARK: - Download de Upcoming
+    static func upcomingMoviesAPI() async -> [Movie] {
+        
+        var components = Movie.urlComponents
+        components.path = "/3/movie/upcoming"
+        components.queryItems = [
+            URLQueryItem(name: "api_key", value: Movie.apiKey)
+        ]
+        
+        let session = URLSession.shared
+        
+        do {
+            let (data, response) = try await session.data(from: components.url!)
+            
+            let decoder = JSONDecoder()
+            decoder.keyDecodingStrategy = .convertFromSnakeCase
+            let movieResult = try decoder.decode(MoviesResponse.self, from: data)
+            
+            return movieResult.results
+            
+        } catch {
+            print(error)
+        }
+        
+        return []
+    }
+    
     
     // MARK: - Download de Imagens
     static func donwloadImageData(withPath: String) async -> Data {

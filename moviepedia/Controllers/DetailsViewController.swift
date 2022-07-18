@@ -32,6 +32,12 @@ class DetailsViewController: UIViewController {
             
             self.backdropImage.image = imagem
         }
+        Task {
+            let imageData = await Movie.donwloadImageData(withPath: movie.posterPath)
+            let imagem = UIImage(data: imageData) ?? UIImage()
+            
+            self.posterImage.image = imagem
+        }
         
         backdropImage.image = UIImage(named: movie.backdropPath)
         titleLabel.text = movie.title
