@@ -28,6 +28,7 @@
 		8FB019922874B0E300126939 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8FB019902874B0E300126939 /* Main.storyboard */; };
 		8FB019942874B0E400126939 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8FB019932874B0E400126939 /* Assets.xcassets */; };
 		8FB019972874B0E400126939 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8FB019952874B0E400126939 /* LaunchScreen.storyboard */; };
+		8FF5A0A228872200001870B3 /* PosterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FF5A0A128872200001870B3 /* PosterViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +55,7 @@
 		8FB019932874B0E400126939 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8FB019962874B0E400126939 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8FB019982874B0E400126939 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8FF5A0A128872200001870B3 /* PosterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PosterViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +91,7 @@
 				8F20F51B287E1450001B43B3 /* FeaturedViewController+UICollectionViewDataSource.swift */,
 				8FA6E16F287F47E200D901F0 /* FeaturedViewController+UICollectionViewDelegate.swift */,
 				8FA6E16D287F3F0400D901F0 /* DetailsViewController.swift */,
+				8FF5A0A128872200001870B3 /* PosterViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -227,6 +230,7 @@
 				8F6547B6287C980A003C6F0C /* PopularCollectionViewCell.swift in Sources */,
 				8F20F51A287DF4E7001B43B3 /* Movie+Popular.swift in Sources */,
 				8FB0198F2874B0E300126939 /* FeaturedViewController.swift in Sources */,
+				8FF5A0A228872200001870B3 /* PosterViewController.swift in Sources */,
 				8FA6E170287F47E200D901F0 /* FeaturedViewController+UICollectionViewDelegate.swift in Sources */,
 				8FA6E16E287F3F0400D901F0 /* DetailsViewController.swift in Sources */,
 				8F9D83852881F8CC00BA2413 /* MoviesResponse.swift in Sources */,
