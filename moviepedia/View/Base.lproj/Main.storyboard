@@ -548,11 +548,41 @@
                     <connections>
                         <segue destination="s2Y-de-Etm" kind="relationship" relationship="viewControllers" id="s9C-GM-PWF"/>
                         <segue destination="5Fm-DJ-iIW" kind="relationship" relationship="viewControllers" id="YcY-OP-wqp"/>
+                        <segue destination="xjN-Cg-b2I" kind="relationship" relationship="viewControllers" id="sK7-7n-8av"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QCS-r8-HpO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-345" y="56"/>
+        </scene>
+        <!--Search movies-->
+        <scene sceneID="f4S-Sa-2Y3">
+            <objects>
+                <viewController id="hbg-9H-hd9" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Q3s-s3-Hc8">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="1110"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eDw-dy-DF3">
+                                <rect key="frame" x="0.0" y="140" width="414" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <color key="barTintColor" red="0.085325915399999994" green="0.085325915399999994" blue="0.085325915399999994" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="comingSoon" translatesAutoresizingMaskIntoConstraints="NO" id="cKM-Yg-47z">
+                                <rect key="frame" x="0.0" y="-62" width="414" height="879"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="k3m-xk-ODp"/>
+                        <color key="backgroundColor" red="0.085325915399999994" green="0.085325915399999994" blue="0.085325915399999994" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Search movies" id="N5j-DR-Iag"/>
+                    <size key="freeformSize" width="414" height="1110"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="y7c-8B-vNV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1844.9275362318842" y="-1633.2589285714284"/>
         </scene>
         <!--Trending View Controller-->
         <scene sceneID="gyA-vR-HHY">
@@ -722,15 +752,42 @@
             </objects>
             <point key="canvasLocation" x="937.68115942028987" y="-795.53571428571422"/>
         </scene>
+        <!--Item-->
+        <scene sceneID="UnJ-6h-ZIB">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="xjN-Cg-b2I" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" image="magnifyingglass" catalog="system" selectedImage="magnifyingglass" id="r2R-8E-gcj"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="y8Z-9f-nIx">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" red="0.76078431369999999" green="0.63529411759999999" blue="0.46666666670000001" alpha="1" colorSpace="calibratedRGB"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <color key="textColor" red="0.76078431369999999" green="0.63529411759999999" blue="0.46666666670000001" alpha="1" colorSpace="calibratedRGB"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="hbg-9H-hd9" kind="relationship" relationship="rootViewController" id="nGa-3C-eW6"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gFP-0b-9Qf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="939" y="-1705"/>
+        </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="3tS-d8-Tu1"/>
+        <segue reference="J73-vW-7Zr"/>
     </inferredMetricsTieBreakers>
     <resources>
+        <image name="comingSoon" width="6001" height="4001"/>
         <image name="film" catalog="system" width="128" height="93"/>
         <image name="film.fill" catalog="system" width="128" height="93"/>
         <image name="flame" catalog="system" width="108" height="128"/>
         <image name="flame.fill" catalog="system" width="108" height="128"/>
+        <image name="magnifyingglass" catalog="system" width="128" height="115"/>
         <image name="star.fill" catalog="system" width="128" height="116"/>
     </resources>
 </document>
